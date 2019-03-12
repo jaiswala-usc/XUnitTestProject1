@@ -16,4 +16,5 @@ steps:
 - script: 
     dotnet build --configuration $(buildConfiguration)
     dotnet test XUnitTestProject1 --configuration $(buildConfiguration) --logger trx
+    dotnet publish --configuration $(buildConfiguration) --output $BUILD_ARTIFACTSTAGINGDIRECTORY
   displayName: 'dotnet build $(buildConfiguration)'
